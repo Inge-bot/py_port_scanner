@@ -19,10 +19,9 @@ def find_open_ports(host, port):
         return True # port is open
     
 host = input("Enter the network host you want to scan:") # request user to input host
-# print(host)
-# print(type(host))
-for port in range(1, 65535): # all ports
-# for port in range(1,1023) # well-known ports
+
+# for port in range(1, 65535): # all ports
+for port in range(1,1023): # well-known ports
     if find_open_ports(host, port):
         print(f"{GREEN}[+] {host}:{port} is open {RESET}")
     else:
